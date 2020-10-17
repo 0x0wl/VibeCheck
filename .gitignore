@@ -1,3 +1,5 @@
 */
 botenv/
 Tester.py
+*.swp
+*.csv
