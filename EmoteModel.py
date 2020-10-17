@@ -11,6 +11,18 @@ import TweetProcessor
 dataset = pandas.read_csv('set.csv')
 dataset = dataset.drop('author', axis=1)
 
+dataset = dataset.drop(dataset[dataset.sentiment == 'anger'].index)
+dataset = dataset.drop(dataset[dataset.sentiment == 'boredom'].index)
+dataset = dataset.drop(dataset[dataset.sentiment == 'enthusiasm'].index)
+dataset = dataset.drop(dataset[dataset.sentiment == 'empty'].index)
+dataset = dataset.drop(dataset[dataset.sentiment == 'fun'].index)
+dataset = dataset.drop(dataset[dataset.sentiment == 'relief'].index)
+dataset = dataset.drop(dataset[dataset.sentiment == 'surprise'].index)
+dataset = dataset.drop(dataset[dataset.sentiment == 'love'].index)
+dataset = dataset.drop(dataset[dataset.sentiment == 'hate'].index)
+dataset = dataset.drop(dataset[dataset.sentiment == 'neutral'].index)
+dataset = dataset.drop(dataset[dataset.sentiment == 'worry'].index)
+
 dataset['content'] = dataset['content'].apply(TweetProcessor.process)
 
 #debugging
@@ -22,19 +34,16 @@ y = label_encoder.fit_transform(dataset.sentiment.values)
 
 X_train, X_val, y_train, y_val = train_test_split(dataset.content.values, y, stratify=y, random_state=23, test_size=0.1, shuffle=True) #test_size=0.1?
 
-tf_idf_params = TfidfVectorizer(ngram_range=(1,3))
-XtIdf = tf_idf_params.fit_transform(X_train)
-XvIdf = tf_idf_params.fit_transform(X_val)
-
 count_vectors = CountVectorizer()
-count_vectors.fit(data['content'])
-XtCount = count_vect.transform(X_train)
-XvCount = count_vect.transform(X_val)
+count_vectors.fit(dataset['content'])
+XtCount = count_vectors.transform(X_train)
+XvCount = count_vectors.transform(X_val)
 
 #debugging
-print("loaded data for gradient descent...")
+print("processed dataset for gradient descent")
+
 
 lsvm = SGDClassifier(random_state=9, max_iter=15, tol=None)
 lsvm.fit(XtCount, y_train)
 y_pred = lsvm.predict(XvCount)
-print('lsvm using count vectors accuracy %s' % accuracy_score(y_pred, y_val))
+print('accuracy: %s' % accuracy_score(y_pred, y_val))
