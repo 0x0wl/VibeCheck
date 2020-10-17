@@ -1,10 +1,7 @@
 import os
 import tweepy as tw
 import pandas as pd
-import urllib.parse
-from nltk.corpus import stopwords
-import nltk.stem
-import string
+import TweetProcessor
 
 api_key = ""
 api_secret = ""
@@ -27,6 +24,6 @@ def fetchTweets(query, language, date_lim, numTweets):
 
     # stores the text of all the processed tweets as a string array
     # strings starting with @RT are retweets
-    data = [TweeterProcessor.process(tweet.text) for tweet in tweets]
+    data = [TweetProcessor.process(tweet.text) for tweet in tweets]
 
     return tweets

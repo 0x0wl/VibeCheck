@@ -34,7 +34,6 @@ XvCount = count_vect.transform(X_val)
 #debugging
 print("loaded data for gradient descent...")
 
-
 lsvm = SGDClassifier(random_state=9, max_iter=15, tol=None)
 lsvm.fit(XtCount, y_train)
 y_pred = lsvm.predict(XvCount)
