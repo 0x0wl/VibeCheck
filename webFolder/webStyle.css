@@ -1,0 +1,35 @@
+body {
+}
+
+h1 {
+
+}
+
+.container {
+	position: relative;
+	width: 50%;
+}
+
+.container:hover .overlay {
+	opacity: 1;
+}
+
+.image {
+	display: block;
+	width: 25%;
+	height: auto;
+}
+
+.overlay {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+	transition: .5s ease;
+	/*change this to the final background color*/
+	background-color: white;
+}
