@@ -28,4 +28,4 @@ def fetchTweets(query, language, date_lim, numTweets):
     # strings starting with @RT are retweets
     data = [TweetProcessor.process(tweet.text) for tweet in tweets]
 
-    return tweets
+    return data
