@@ -3,11 +3,13 @@ import tweepy as tw
 import pandas as pd
 import TweetProcessor
 
-api_key = ""
-api_secret = ""
-token = ""
+authFile = open("secret.txt", "r")
+key = authFile.readLine()
+secret = authFile.readLine()
+access_token = authFile.readLine()
+access_token_secret = authFile.readLine()
 
-auth = tw.OAuthHandler(consumer_key, consumer_secret)
+auth = tw.OAuthHandler(key, secret)
 auth.set_access_token(access_token, access_token_secret)
 api = tw.API(auth, wait_on_rate_limit=True)
 
