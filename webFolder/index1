@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>HelloWorld2020</title>
+
+		<link rel="stylesheet" href="webStyle.css">
+		<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap" rel="stylesheet"> <!-- Import fonts -->
+		<link rel="icon" href="whiteTwitterIcon.png" type="image/gif" sizes="16x16"> <!-- Tab decor -->
+
+
+		<style>
+
+					body { font-family: 'Work Sans', sans-serif; }
+					h1 { }
+					/* hover logo */
+					.container { position: relative; width: 50%; }
+					.container:hover .overlay { opacity: 1; }
+					.image { display: block; width: 100%; height: auto; }
+					.overlay { position: absolute; top: 0; bottom: 0; left: 0; right: 0; height: 100%; width: 100%; opacity: 0; transition: .5s ease;
+				/*change this to the final background color*/
+					background-color: grey; }
+					/* read through text file */
+					#list p { font: arial; font-size: 14px; background-color: white; }
+			 /* input bar changes width */
+					input[type=submit] { width: 100px; -webkit-transition: width .35s ease-in-out; transition: width .35s east-in-out; }
+					input[type=submit]:focus { width: 250px; }
+
+		</style>
+
+
+  </head>
+
+  <body>
+    <!--  Page content goes here -->
+  </body>
+
+</html>
