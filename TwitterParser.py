@@ -13,6 +13,9 @@ auth = tw.OAuthHandler(key, secret)
 auth.set_access_token(access_token, access_token_secret)
 api = tw.API(auth, wait_on_rate_limit=True)
 
+myStreamListener = MyStreamListener()
+myStream = tweepy.Stream(auth = api.auth, listener=myStreamListener())
+
 def fetchTweets(query, language, date_lim, numTweets):
     # query encoded to acceptable URL query
     query = "+".join([urllib.parse.quote(s) for s in query.split()])
