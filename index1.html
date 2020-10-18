@@ -60,12 +60,8 @@
 			var index = 0;
 			function changeBackground() {
 				var colours = ["#61EF27", "#5CEF27", "#5CEF27", "#57EF27", "#52EF27", "#49EF27", "#44EF27", "#3FEF27", "#3AEF27", "#35EF27", "#30EF27", "#2CEF27", "#27EF27", "#27EF2C", "#27EF30", "#27EF35", "#27EF3A", "#27EF3F", "#27EF44", "#27EF49", "#27EF4D", "#27EF52", "#27EF57", "#27EF5C", "#27EF61", "#27EF65", "#27EF6A", "#27EF6F", "#27EF74", "#27EF79", "#27EF7D", "#27EF82", "#27EF87", "#27EF8C", "#27EF91", "#27EF96", "#27EF9A", "#27EF9F", "#27EFA4", "#27EFA9", "#27EFAE", "#27EFB2", "#27EFB7", "#27EFBC", "#27EFC1", "#27EFC6", "#27EFCB", "#27EFCF", "#27EFD4", "#27EFD9", "#27EFDE", "#27EFE3", "#27EFE7", "#27EFEC", "#27ECEF", "#27E7EF", "#27E3EF", "#27DEEF", "#27D9EF", "#27D4EF", "#27CFEF", "#27CBEF", "#27C6EF", "#27C1EF", "#27BCEF", "#27B7EF", "#27B2EF", "#27AEEF", "#27A9EF", "#27A4EF", "#279FEF", "#279AEF", "#2796EF", "#2791EF", "#278CEF", "#2787EF", "#2782EF", "#277DEF" ,"#2779EF", "#2774EF", "#276FEF", "#276AEF", "#2765EF", "#2761EF", "#2757EF", "#2752EF", "#274DEF", "#2749EF", "#2744EF", "#273FEF", "#273AEF", "#2735EF", "#2730EF", "#272CEF", "#2727EF", "#2C27EF", "#3027EF", "#3527EF", "#3A27EF"];
-                fetch('localhost:5000/_refresh')
-                    .then(response => response.json())
-                    .then(data => {
-                        index = parseInt(data.ratio)
-                    })
 				bg.style.backgroundColor = colours[index%colours.length];
+				index++;
 				console.log(index)
 			}
 			function startTimer() {
