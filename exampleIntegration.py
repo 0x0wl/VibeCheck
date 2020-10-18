@@ -7,7 +7,7 @@ def weigh(prediction):
     listpred = prediction.tolist()
     #print(listpred)
     #print(listpred.count(0), listpred.count(1))
-    happyRatio = listpred.count(0) / len(listpred)
+    happyRatio = listpred.count(1) / len(listpred)
     return happyRatio
 
 def clock():
