@@ -11,20 +11,20 @@ import TweetProcessor
 
 from sklearn.linear_model import LogisticRegression
 
-dataset = pandas.read_csv('set.csv')
-dataset = dataset.drop('author', axis=1)
+dataset = pandas.read_csv('newset.csv')
+#dataset = dataset.drop('author', axis=1)
 
-dataset = dataset.drop(dataset[dataset.sentiment == 'anger'].index)
-dataset = dataset.drop(dataset[dataset.sentiment == 'boredom'].index)
-dataset = dataset.drop(dataset[dataset.sentiment == 'enthusiasm'].index)
-dataset = dataset.drop(dataset[dataset.sentiment == 'empty'].index)
-dataset = dataset.drop(dataset[dataset.sentiment == 'fun'].index)
-dataset = dataset.drop(dataset[dataset.sentiment == 'relief'].index)
-dataset = dataset.drop(dataset[dataset.sentiment == 'surprise'].index)
-dataset = dataset.drop(dataset[dataset.sentiment == 'love'].index)
-dataset = dataset.drop(dataset[dataset.sentiment == 'hate'].index)
+#dataset = dataset.drop(dataset[dataset.sentiment == 'anger'].index)
+#dataset = dataset.drop(dataset[dataset.sentiment == 'boredom'].index)
+#dataset = dataset.drop(dataset[dataset.sentiment == 'enthusiasm'].index)
+#dataset = dataset.drop(dataset[dataset.sentiment == 'empty'].index)
+#dataset = dataset.drop(dataset[dataset.sentiment == 'fun'].index)
+#dataset = dataset.drop(dataset[dataset.sentiment == 'relief'].index)
+#dataset = dataset.drop(dataset[dataset.sentiment == 'surprise'].index)
+#dataset = dataset.drop(dataset[dataset.sentiment == 'love'].index)
+#dataset = dataset.drop(dataset[dataset.sentiment == 'hate'].index)
 #dataset = dataset.drop(dataset[dataset.sentiment == 'neutral'].index)
-dataset = dataset.drop(dataset[dataset.sentiment == 'worry'].index)
+#dataset = dataset.drop(dataset[dataset.sentiment == 'worry'].index)
 
 dataset['content'] = dataset['content'].apply(TweetProcessor.process)
 
@@ -43,14 +43,14 @@ XtCount = count_vectors.transform(X_train)
 XvCount = count_vectors.transform(X_val)
 
 #debugging
-print("processed dataset for gradient descent")
+print("processed dataset for logistic regression")
 
 
 #lsvm = SGDClassifier(random_state=9, max_iter=30, tol=None)
 #lsvm.fit(XtCount, y_train)
-logreg = LogisticRegression(C=1, max_iter=10000, tol=0.000001)
+logreg = LogisticRegression(C=1, max_iter=1000, tol=0.0001)
 logreg.fit(XtCount, y_train)
-print(logreg.classes_)
+#print(logreg.classes_)
 y_pred = logreg.predict(XvCount)
 print('accuracy: %s' % accuracy_score(y_pred, y_val))
 
@@ -60,3 +60,4 @@ tweets = ["@NerdIndian Take that back. I am insulted.", "AAA IM SO ANGRY GRR", "
 tweet_count = count_vectors.transform(tweets)
 next_pred = logreg.predict(tweet_count)
 print(next_pred)
+
