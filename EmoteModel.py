@@ -51,9 +51,10 @@ def make_prediction(logreg, count_vectors, tweets = ["@NerdIndian Take that back
     next_pred = logreg.predict(tweet_count)
     return next_pred
 
+'''
 def main():
     logreg, count_vectors = init_model()
     print(make_prediction(logreg, count_vectors))
+'''
 
-
-main()
+#main()

@@ -1,7 +1,24 @@
 from flask import Flask
-import TweetParser
-app = Flask(__Controller__)
+from exampleIntegration import cycle
+import EmoteModel
+app = Flask(__name__)
 
-@app.route("/start?=<start>/end?=<end>")
-def getTweet(start, end):
-    TweetParser.fetchTweets("", "en", start, 900)
+global logreg
+global count_vectors
+
+@app.before_first_request
+def torrtle():
+    global logreg
+    global count_vectors 
+    logreg, count_vectors = EmoteModel.init_model()
+    
+
+
+@app.route('/_refresh')
+def hello_world():
+    global logreg
+    global count_vectors 
+    return str(cycle(logreg, count_vectors))
+
+if __name__ == "__main__":
+    app.run(debug=True) 
