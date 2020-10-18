@@ -2,6 +2,6 @@
 botenv/
 Tester.py
 *.swp
-*.csv
+set.csv
 hack.py
 secret.txt
