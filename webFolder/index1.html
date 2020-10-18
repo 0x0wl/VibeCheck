@@ -6,7 +6,6 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <title>HelloWorld2020</title>
 
-		<link rel="stylesheet" href="webStyle.css">
 		<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> <!-- bootstrap -->
 		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -19,15 +18,16 @@
 		<style>
 
 					html { background-color: #inherit; }
-					h3 { font-size: 65px; }
-					body { font-family: 'Hind', sans-serif; color: #1DA1F2; font-size: 40px; overflow: hidden; background-color: inherit;}
+					h3 { font-size: 40px; }
+					body { font-family: 'Hind', sans-serif; color: #858585; font-size: 40px; overflow: hidden; background-color: inherit;}
 					p { font-size: 40px; }
 					h1 { }
+					a { color: #858585; }
 					/* hover logo */
-					.image { position: relative; width: 80px; height: auto; opacity: 1; transition: .5s ease; }
+					.image { position: relative; width: 120px; height: auto; opacity: 1; transition: .5s ease; }
 					.image:hover { opacity: 0.3; }
 					/* read through text file */
-					#list p { font: arial; font-size: 14px; background-color: #232323; }
+					#list p { font: arial; font-size: 14px; }
 			 /* input bar changes width */
 					input[type=submit] { width: 100px; -webkit-transition: width .35s ease-in-out; transition: width .35s east-in-out; }
 					input[type=submit]:focus { width: 250px; }
@@ -43,44 +43,22 @@
   </head>
 	<body>
 		<div class="row">
-					<div class="col-md-4" style="margin-top: 0%; margin-left: 1%;"><img src="whiteTwitterIcon.png" class="image"></div>
-					<div class="col-md-2 ml-auto"><p style="margin-top: 13%; font-size: 16px;">lskdfjlksdjteamname</p></div>
+					<div class="col-md-4" style="margin-top: 0%; margin-left: 3%;"><a href=""><img src="whiteTwitterIcon.png" class="image"></a></div>
+					<div class="col-md-2 ml-auto"><p style="margin-top: 24%; font-size: 16px;"><a href="">lskdfjlksdjteamname</a></p></div>
 		</div>
-		<div class="row">
-			<div class="col-md-4 ml-md-auto"></div>
-		</div>	
-		<br><br><br><br><br>
+
+<br>
+
+							<p><iframe src="test_text.txt" frameborder="0" margin-left="20px" height="100%" width="150%"></iframe></p>
+
+							<h3 style="text-align: right;position: absolute; bottom: 0; right: 15px;">TWITTER<br><span class="text-white">EMOTIONAL<br>ANALYZER</span></h3>
+
+
+		<!--
 		<div class="row">
 			<div class="col-md-4 ml-md-auto"><h3 style="text-align: right">TWITTER<br><span class="text-white">EMOTIONAL<br>ANALYZER</span></h3></div>
 		</div>
-<!--
-  <body class="p-3 mb-2 bg-dark">
-		<div class="app-content">
-
-
-			<div class="row">
-			  		<div class="col-md-4" style="margin-top: 0%; margin-left: 1%;"><img src="whiteTwitterIcon.png" class="image"></div>
-					  <div class="col-md-4 ml-auto"><p style="text-align: right; font-size: 16px;">lskdfjlksdjteamname</p></div>
-			</div>
-				<br>
-					<br>
-			<div class="row">
-						<div class="col-md-3 ml-md-auto"><div class="vl"></div></div>
-					  <div class="col-md-3 ml-md-auto"><p style="text-align: right">TWITTER<br><span class="text-white">EMOTIONAL<br>ANALYZER</span></p></div>
-			</div>
-			<div class="row">
-					  <div class="col-auto mr-auto">
-
-							<div class="bg" style="height: 100%; width: auto;"><p class="score"></p></div>
-
-						</div>
-			</div>
-			<div class="fixed-bottom">
-					<div class="bg" style=""><p class="score"></p></div>
-			</div>
-
-		</div>
--->
+	-->
 		<script>
 			var bg = document.querySelector('.bg');
 
