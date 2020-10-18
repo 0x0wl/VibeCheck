@@ -33,7 +33,6 @@ def fetchTweets(language, numTweets):
 
 
     #query = "https://api.twitter.com/1.1/search/tweets.json?q=(i%20OR%20to%20OR%20a%20OR%20and%20OR%20is%20OR%20in%20OR%20it%20OR%20you%20OR%20of%20OR%20tinyurl.com%20OR%20for%20OR%20on%20OR%20my%20OR%20%E2%80%98s%20OR%20that%20OR%20at%20OR%20with%20OR%20me%20OR%20do%20OR%20have%20OR%20just%20OR%20this%20OR%20be%20OR%20n%E2%80%99t%20OR%20so)&src=typed_query"
-
     query = '(i OR to OR a OR and OR is OR in OR it OR you OR of OR tinyurl.com OR for OR on OR my OR ‘s OR that OR at OR with OR me OR do OR have OR just OR this OR be OR n’t OR so)'
     # fetches an iterable collection of the
     # - specified number of tweets (numTweets)

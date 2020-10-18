@@ -1,12 +1,11 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" <div class="bg" style=""><p class="score"></p></div>
 
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <title>HelloWorld2020</title>
 
-		<link rel="stylesheet" href="webStyle.css">
 		<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> <!-- bootstrap -->
 		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -18,61 +17,65 @@
 
 		<style>
 
-					html { background-color: #232323; }
-					h3 { font-size: 16px; }
-					body { font-family: 'Hind', sans-serif; color: #1DA1F2; font-size: 40px; }
-					p { font-size: 16px; }
+					html { background-color: #inherit; }
+					h3 { font-size: 40px; }
+					body { font-family: 'Hind', sans-serif; color: #858585; font-size: 40px; overflow: hidden; background-color: inherit;}
+					p { font-size: 40px; }
 					h1 { }
+					a { color: #858585; }
 					/* hover logo */
-					.image { position: relative; width: 45px; height: auto; opacity: 1; transition: .5s ease; }
+					.image { position: relative; width: 120px; height: auto; opacity: 1; transition: .5s ease; }
 					.image:hover { opacity: 0.3; }
 					/* read through text file */
-					#list p { font: arial; font-size: 14px; background-color: #232323; }
+					#list p { font: arial; font-size: 14px; }
 			 /* input bar changes width */
 					input[type=submit] { width: 100px; -webkit-transition: width .35s ease-in-out; transition: width .35s east-in-out; }
 					input[type=submit]:focus { width: 250px; }
 			/* vertical line */
-					.vl { border-right: 2px solid white; height: 500px; }
+					.vl { border-right: 2px solid white; height: 300px; }
 					.container { width: 600px; height: 190px; padding-top: 20px; padding-left: 15px; padding-right: 15px; }
 					.app-content { height: 100vh; }
+					.bg { width: 100%; height: 100%; }
 
 		</style>
 
 
   </head>
-
-  <body class="p-3 mb-2 bg-dark">
-		<div class="app-content">
-
-			<div class="row" style="margin-top: 10%;">
-				<img src="whiteTwitterIcon.png" class="image">
-				<h3>3ff47a2d7c0f78a49c8774990d82ccdd : heck</h3>
-			</div>
-
-			<div class="container">
-			  <div class="row">
-			    <div class="col-sm">
-			      <p style="text-align: right">TWITTER<br><span class="text-white">EMOTIONAL<br>ANALYZER</span></p>
-			    </div>
-			    <div class="col-sm">
-			      <div class="vl"></div>
-			    </div>
-					<div class="col-sm">
-					</div>
-			    <div class="col-sm">
-			      <p>TWITTER<br><span class="text-white">EMOTIONAL<br>ANALYZER</span></p>
-
-						<form action="/signup" method="post">
-							<label> Date </date>
-							<input type="text" name="date">
-							<button type="submit" value="Finddate"> Submit </button>
-						</form>
-			    </div>
-			  </div>
-			</div>
-
-
+	<body>
+		<div class="row">
+					<div class="col-md-4" style="margin-top: 0%; margin-left: 3%;"><a href=""><img src="whiteTwitterIcon.png" class="image"></a></div>
+					<div class="col-md-2 ml-auto"><p style="margin-top: 24%; font-size: 16px;"><a href="">lskdfjlksdjteamname</a></p></div>
 		</div>
+
+<br>
+
+							<p><iframe src="test_text.txt" frameborder="0" margin-left="20px" height="100%" width="150%"></iframe></p>
+
+							<h3 style="text-align: right;position: absolute; bottom: 0; right: 15px;">TWITTER<br><span class="text-white">EMOTIONAL<br>ANALYZER</span></h3>
+
+
+		<!--
+		<div class="row">
+			<div class="col-md-4 ml-md-auto"><h3 style="text-align: right">TWITTER<br><span class="text-white">EMOTIONAL<br>ANALYZER</span></h3></div>
+		</div>
+	-->
+		<script>
+			var bg = document.querySelector('.bg');
+
+			var index = 0;
+			function changeBackground() {
+				var colours = ["#61EF27", "#5CEF27", "#5CEF27", "#57EF27", "#52EF27", "#49EF27", "#44EF27", "#3FEF27", "#3AEF27", "#35EF27", "#30EF27", "#2CEF27", "#27EF27", "#27EF2C", "#27EF30", "#27EF35", "#27EF3A", "#27EF3F", "#27EF44", "#27EF49", "#27EF4D", "#27EF52", "#27EF57", "#27EF5C", "#27EF61", "#27EF65", "#27EF6A", "#27EF6F", "#27EF74", "#27EF79", "#27EF7D", "#27EF82", "#27EF87", "#27EF8C", "#27EF91", "#27EF96", "#27EF9A", "#27EF9F", "#27EFA4", "#27EFA9", "#27EFAE", "#27EFB2", "#27EFB7", "#27EFBC", "#27EFC1", "#27EFC6", "#27EFCB", "#27EFCF", "#27EFD4", "#27EFD9", "#27EFDE", "#27EFE3", "#27EFE7", "#27EFEC", "#27ECEF", "#27E7EF", "#27E3EF", "#27DEEF", "#27D9EF", "#27D4EF", "#27CFEF", "#27CBEF", "#27C6EF", "#27C1EF", "#27BCEF", "#27B7EF", "#27B2EF", "#27AEEF", "#27A9EF", "#27A4EF", "#279FEF", "#279AEF", "#2796EF", "#2791EF", "#278CEF", "#2787EF", "#2782EF", "#277DEF" ,"#2779EF", "#2774EF", "#276FEF", "#276AEF", "#2765EF", "#2761EF", "#2757EF", "#2752EF", "#274DEF", "#2749EF", "#2744EF", "#273FEF", "#273AEF", "#2735EF", "#2730EF", "#272CEF", "#2727EF", "#2C27EF", "#3027EF", "#3527EF", "#3A27EF"];
+				bg.style.backgroundColor = colours[index%colours.length];
+				index++;
+				console.log(index)
+			}
+			function startTimer() {
+				var timer = setInterval(changeBackground, 200);
+			}
+			document.body.onload = startTimer;
+			document.getElementById("Allen").addEventListener("click", changeBackground, false);
+		</script>
   </body>
+
 
 </html>
