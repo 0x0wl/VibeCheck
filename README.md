@@ -11,5 +11,5 @@ Uses natural language toolkit, numpy, flask, and tweepy.
 ## How to run VibeCheck
 1) Put your Twitter API tokens in secret.txt
 2) pip install all the libraries (numpy, tweepy, nltk, pandas, flask, sklearn)
-3) python3 flaskapp.py
+3) python3 FlaskApp.py
 4) open index1.html
