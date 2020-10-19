@@ -4,18 +4,11 @@ import pandas as pd
 import TweetProcessor
 import urllib
 
-'''
 authFile = open("secret.txt", "r")
-key = authFile.readline()
-secret = authFile.readline()
-access_token = authFile.readline()
-access_token_secret = authFile.readline()
-'''
-
-key = "EcsyxryuRq8XhLy71ms4SlEhR"
-secret = "ijcnYgSILJCTt326ae8N17Fu9bPh9FroIYjMLHwSAoEIvFXVFt"
-access_token = "1317247498805796866-BDFv0CFdZ9dTRHZz9tJzLfjHJGO33v"
-access_token_secret = "fOiEtSjnzlSGUoWeHD2ncQBYm1eCROcq3b5xM09gJZfyk"
+key = authFile.readline()[:-1]
+secret = authFile.readline()[:-1]
+access_token = authFile.readline()[:-1]
+access_token_secret = authFile.readline()[:-1]
 
 auth = tw.OAuthHandler(key, secret)
 auth.set_access_token(access_token, access_token_secret)
@@ -39,11 +32,11 @@ def fetchTweets(language, numTweets):
     # - starting from the date specified, (date_lim)
     # - in whatever language, (language)
     # - in the search query (query)
-    #tweets = tw.Cursor(api.search, q = query, lang = language).items(numTweets)    
+    #tweets = tw.Cursor(api.search, q = query, lang = language).items(numTweets)
     data = []
     for tweet in api.search(q=query, lang="en", rpp=10):
-        data.append(TweetProcessor.process(tweet.text)) 
-     
+        data.append(TweetProcessor.process(tweet.text))
+
     #print(tweet.text for tweet in tweets)
 
     # stores the text of all the processed tweets as a string array
